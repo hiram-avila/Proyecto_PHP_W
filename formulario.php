@@ -8,10 +8,6 @@
     <link rel="stylesheet" href="templates/formulario.css">
 </head>
 <body>
-    <!-- <form action="forma.php" method="get">
-        <input type="text" name="usuario" id="usuario">
-        <input type="submit" value="Enviar">
-    </form> -->
     <header>
         <h1>Registro de Productos</h1>
     </header>
@@ -36,6 +32,6 @@
     <footer>
         Derechos Reservados &copy; - 2022
     </footer>
-    <script src="../php_project/js/prueba.js"></script> 
+    <script src="../php_project/js/insertar.js"></script> 
 </body>
 </html>

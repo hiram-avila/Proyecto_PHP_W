@@ -13,5 +13,5 @@
         die("Fallo la conexion: ". $conn->connect_error);
     }
 
-    //echo "Conexión Exitosa";
+    echo "Conexión Exitosa";
 ?>

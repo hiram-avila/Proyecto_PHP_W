@@ -11,15 +11,15 @@
 
     // Conexion
     // "insert into productos(nombre, precio, descripcion, imagen) values('".$nombre."',".$precio.", '".$descripcion."','".$imagen."')";
-    $query = "insert into productos(nombre, precio, descripcion, imagen) values('".$nombre."',".$precio.", '".$descripcion."','".$imagen['name']."')";
-    //$query = "insert into productos(nombre, precio, descripcion, imagen) values(?,?,?,?)";
+    //$query = "insert into productos(nombre, precio, descripcion, imagen) values('".$nombre."',".$precio.", '".$descripcion."','".$imagen['name']."')";
+    $query = "insert into productos(nombre, precio, descripcion, imagen) values(?, ?, ?, ?)";
     //var_dump($conn->query($query));
-    $conn->query($query);
+    //$conn->query($query);
 
     // Sentencias preparadas
-    // $sentencia = $conn->prepare($query);
-    // $sentencia->bind_param('sdss', $nombre, $precio, $descripcion, $imagen);
-    // $sentencia->execute();
+    $sentencia = $conn->prepare($query);
+    $sentencia->bind_param("sdss", $nombre, $precio, $descripcion, $imagen['name']);
+    $sentencia->execute();
 
     move_uploaded_file($imagen['tmp_name'], $_SERVER['DOCUMENT_ROOT'].'/php_project/upload/'.$imagen['name']);
 

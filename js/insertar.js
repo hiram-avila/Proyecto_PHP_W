@@ -6,7 +6,7 @@ formulario.addEventListener('submit', (event) => {
 
     const data = new FormData(formulario);
 
-    fetch('templates/productos.php', {
+    fetch('templates/insertar.php', {
         method: 'post',
         body: data
     })
